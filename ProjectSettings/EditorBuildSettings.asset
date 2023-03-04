@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ZEPETO-Class-Multi-WorldMap2.unity
-    guid: c371f3d62f641514787765c03de077a0
+    path: Assets/Scenes/ZEPETO-Class-Multi-HipHopClass.unity
+    guid: de500eb677fe7054dacc5ee3901de5ca
   m_configObjects: {}
