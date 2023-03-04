@@ -1,0 +1,37 @@
+fileFormatVersion: 2
+guid: de9d77af1cde0be418faedc07de019d4
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst __UnityEngine__ = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst ZEPETO_World_1 = require(\"ZEPETO.World\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nclass
+    ToAnotherWorld extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor()
+    {\r\n        super(...arguments);\r\n        this.worldId = \"[World ID]\"; //
+    ex: com.default.jumpworld\r\n    }\r\n    Start() {\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this.zepetoCharacter = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n       
+    });\r\n    }\r\n    OnTriggerEnter(collider) {\r\n        if ((this.zepetoCharacter
+    == null) || (__UnityEngine__.GameObject.op_Inequality(collider.gameObject, this.zepetoCharacter.gameObject)))
+    {\r\n            return;\r\n        }\r\n        ZEPETO_World_1.ZepetoWorldContent.MoveToWorld(this.worldId,
+    (errCode, errMsg) => {\r\n            // Example of error callback processing
+    (When implementing , try to implement it in various ways, such as pop-up windows)\r\n           
+    console.log(`${errCode} - ${errMsg}`);\r\n        });\r\n    }\r\n}\r\nexports.default
+    = ToAnotherWorld;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVG9Bbm90aGVyV29ybGQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUb0Fub3RoZXJXb3JsZC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSxpREFBc0Q7QUFDdEQsK0NBQWtEO0FBRWxELDZFQUEyRjtBQUUzRixNQUFxQixjQUFlLFNBQVEscUNBQXFCO0lBQWpFOztRQUdZLFlBQU8sR0FBVyxZQUFZLENBQUMsQ0FBQyw0QkFBNEI7SUFtQnhFLENBQUM7SUFqQkcsS0FBSztRQUNELDJDQUFhLENBQUMsUUFBUSxDQUFDLGtCQUFrQixDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFDdkQsSUFBSSxDQUFDLGVBQWUsR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQztRQUNyRixDQUFDLENBQUMsQ0FBQztJQUNQLENBQUM7SUFFRCxjQUFjLENBQUMsUUFBa0I7UUFDN0IsSUFBSSxDQUFDLElBQUksQ0FBQyxlQUFlLElBQUksSUFBSSxDQUFDLElBQUksNEJBVTQrVCxhQUFjLENBVnovVCxRQUFRLENBQUMsVUFBVSxFQUFJLElBQUksQ0FBQyxlQUFlLENBQUMsVUFBVSxFQUFDLEVBQUU7WUFDNUYsT0FBTztTQUNWO1FBRUQsaUNBQWtCLENBQUMsV0FBVyxDQUFDLElBQUksQ0FBQyxPQUFPLEVBQUUsQ0FBQyxPQUFPLEVBQUUsTUFBTSxFQUFFLEVBQUU7WUFDN0QseUhBQXlIO1lBQ3pILE9BQU8sQ0FBQyxHQUFHLENBQUMsR0FBRyxPQUFPLE1BQU0sTUFBTSxFQUFFLENBQUMsQ0FBQztRQUMxQyxDQUFDLENBQUMsQ0FBQztJQUNQLENBQUM7Q0FFSjtBQXRCRCxpQ0FzQkMifQ==","assetPath":"Assets/Scripts/ToAnotherWorld.ts","manifest":{"properties":[],"name":"ToAnotherWorld","description":""},"isCompiled":true}'
+  typescriptHash: 9f3ad393d3b41f4e76bda9c21e77616d
+  onlyWriteTrigger: 0
